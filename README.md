@@ -1,5 +1,8 @@
 
 ## react-native-scrollable-tab-view
+
+:warning: **NOTE**: We removed the the `react-native-pager-view` dependency from `package.json` because it was conflicting with our existing version of `react-native-pager-view`. If you install this package, you must also have `react-native-pager-view` installed.
+
 [![npm version](https://badge.fury.io/js/react-native-scrollable-tab-view.svg)](https://badge.fury.io/js/react-native-scrollable-tab-view)
 
 This is probably my favorite navigation pattern on Android, I wish it
