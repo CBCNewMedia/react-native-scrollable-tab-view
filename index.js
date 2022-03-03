@@ -14,14 +14,17 @@ const {
 } = ReactNative;
 
 const TimerMixin = require('react-timer-mixin');
-const PagerView = require('react-native-pager-view');
+let ViewPager = require('react-native-pager-view');
+if(typeof ViewPager === 'object' && typeof ViewPager.default === 'function') {
+  ViewPager = ViewPager.default;
+}
 
 const SceneComponent = require('./SceneComponent');
 const DefaultTabBar = require('./DefaultTabBar');
 const ScrollableTabBar = require('./ScrollableTabBar');
 
 const AnimatedViewPagerAndroid = Platform.OS === 'android' ?
-  Animated.createAnimatedComponent(PagerView) :
+  Animated.createAnimatedComponent(ViewPager) :
   undefined;
 
 const ScrollableTabView = createReactClass({
